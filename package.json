@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/dev.mjs",
+    "dev:turbo": "next dev --turbopack",
+    "dev:stop": "node scripts/dev.mjs --stop-only",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."

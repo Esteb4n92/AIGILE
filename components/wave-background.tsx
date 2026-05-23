@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 // @ts-ignore
 import anime from "animejs/lib/anime.es.js";
 
-const BASE_SPEED = 0.00045;
-const BREATHE_DURATION = 8000;
-const DRIFT_DURATION = 13000;
+const BASE_SPEED = 0.00055;
+const BREATHE_DURATION = 6000;
+const DRIFT_DURATION = 10000;
 
 interface WaveLayer {
   yRatio: number;
@@ -20,12 +20,12 @@ interface WaveLayer {
 }
 
 const WAVE_LAYERS: WaveLayer[] = [
-  { yRatio: 0.12, amplitude: 45, frequency: 0.0022, speedMult: 0.65, opacity: 0.030, color: "212,175,55", lineWidth: 0.8, phase: 0.00 },
-  { yRatio: 0.26, amplitude: 80, frequency: 0.0019, speedMult: 1.00, opacity: 0.052, color: "212,175,55", lineWidth: 1.2, phase: 2.09 },
-  { yRatio: 0.42, amplitude: 55, frequency: 0.0034, speedMult: 1.38, opacity: 0.038, color: "220,182,60", lineWidth: 1.0, phase: 4.18 },
-  { yRatio: 0.56, amplitude: 100, frequency: 0.0015, speedMult: 0.72, opacity: 0.026, color: "195,155,38", lineWidth: 1.5, phase: 1.05 },
-  { yRatio: 0.70, amplitude: 42, frequency: 0.0048, speedMult: 1.65, opacity: 0.048, color: "240,200,70", lineWidth: 0.8, phase: 3.30 },
-  { yRatio: 0.84, amplitude: 68, frequency: 0.0026, speedMult: 0.90, opacity: 0.030, color: "180,143,33", lineWidth: 1.1, phase: 5.00 },
+  { yRatio: 0.12, amplitude: 65, frequency: 0.0022, speedMult: 0.65, opacity: 0.10, color: "212,175,55", lineWidth: 1.5, phase: 0.00 },
+  { yRatio: 0.26, amplitude: 110, frequency: 0.0019, speedMult: 1.00, opacity: 0.18, color: "212,175,55", lineWidth: 2.0, phase: 2.09 },
+  { yRatio: 0.42, amplitude: 80, frequency: 0.0034, speedMult: 1.38, opacity: 0.13, color: "220,182,60", lineWidth: 1.8, phase: 4.18 },
+  { yRatio: 0.56, amplitude: 130, frequency: 0.0015, speedMult: 0.72, opacity: 0.09, color: "195,155,38", lineWidth: 2.5, phase: 1.05 },
+  { yRatio: 0.70, amplitude: 60, frequency: 0.0048, speedMult: 1.65, opacity: 0.16, color: "240,200,70", lineWidth: 1.5, phase: 3.30 },
+  { yRatio: 0.84, amplitude: 95, frequency: 0.0026, speedMult: 0.90, opacity: 0.11, color: "180,143,33", lineWidth: 2.0, phase: 5.00 },
 ];
 
 function drawWave(
@@ -65,17 +65,26 @@ function drawWave(
   grad.addColorStop(1, `rgba(${layer.color},0)`);
 
   ctx.save();
+  // Outer glow pass
   ctx.strokeStyle = grad;
-  ctx.lineWidth = layer.lineWidth * 5;
-  ctx.globalAlpha = 0.18;
-  ctx.shadowBlur = 14;
-  ctx.shadowColor = `rgba(${layer.color},0.25)`;
+  ctx.lineWidth = layer.lineWidth * 8;
+  ctx.globalAlpha = 0.30;
+  ctx.shadowBlur = 28;
+  ctx.shadowColor = `rgba(${layer.color},0.55)`;
   ctx.stroke();
 
+  // Mid glow pass
+  ctx.lineWidth = layer.lineWidth * 3;
+  ctx.globalAlpha = 0.55;
+  ctx.shadowBlur = 14;
+  ctx.shadowColor = `rgba(${layer.color},0.40)`;
+  ctx.stroke();
+
+  // Crisp line pass
   ctx.lineWidth = layer.lineWidth;
   ctx.globalAlpha = 1;
-  ctx.shadowBlur = 4;
-  ctx.shadowColor = `rgba(${layer.color},0.18)`;
+  ctx.shadowBlur = 6;
+  ctx.shadowColor = `rgba(${layer.color},0.60)`;
   ctx.stroke();
   ctx.restore();
 }
@@ -90,7 +99,10 @@ export function WaveBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const params = { amplitudeScale: 1.0, verticalDrift: 0 };
+    // On mobile screens boost amplitude so waves are always visible
+    const isMobile = window.innerWidth < 768;
+    const mobileBoost = isMobile ? 1.6 : 1.0;
+    const params = { amplitudeScale: mobileBoost, verticalDrift: 0 };
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -101,10 +113,14 @@ export function WaveBackground() {
 
     const animes: anime.AnimeInstance[] = [];
 
+    const breatheMin = isMobile ? 1.1 : 0.70;
+    const breatheMax = isMobile ? 2.0 : 1.40;
+    const driftRange = isMobile ? 22 : 16;
+
     animes.push(
       anime({
         targets: params,
-        amplitudeScale: [0.78, 1.22],
+        amplitudeScale: [breatheMin, breatheMax],
         duration: BREATHE_DURATION,
         direction: "alternate",
         loop: true,
@@ -112,7 +128,7 @@ export function WaveBackground() {
       }),
       anime({
         targets: params,
-        verticalDrift: [-13, 13],
+        verticalDrift: [-driftRange, driftRange],
         duration: DRIFT_DURATION,
         direction: "alternate",
         loop: true,
