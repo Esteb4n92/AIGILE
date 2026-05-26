@@ -23,20 +23,20 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "nav.cta": "Talk Now",
-    
+
     // Hero
-    "hero.badge": "TECHNOLOGY MICRO-AGENCY",
+    "hero.badge": "AUTOMATION AND DEVELOPMENT AGENCY",
     "hero.title1": "Design that sells.",
     "hero.title2": "Technology that scales.",
-    "hero.subtitle": "Landing pages, automations, and custom dashboards. Built with precision for brands that don't settle.",
+    "hero.subtitle": "We build custom landing pages, automations, and dashboards for businesses that want to grow faster.",
     "hero.cta.primary": "Start Project",
     "hero.cta.secondary": "View Work",
-    
+
     // Services
     "services.badge": "SERVICES",
     "services.title": "Everything you need, nothing you don't.",
     "services.landing.title": "Landing Pages",
-    "services.landing.description": "High-impact sites that convert visitors into customers.",
+    "services.landing.description": "Fast, modern landing pages optimized to convert visits into customers.",
     "services.landing.f1": "Custom premium design",
     "services.landing.f2": "SEO optimized",
     "services.landing.f3": "Ultra-fast loading",
@@ -53,7 +53,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.dashboard.f2": "Connect your data sources",
     "services.dashboard.f3": "Responsive design",
     "services.dashboard.f4": "Multi-user access",
-    
+
     // Why AIGILE
     "why.badge": "WHY AIGILE",
     "why.title": "An agile agency. Product mindset.",
@@ -65,14 +65,14 @@ const translations: Record<Language, Record<string, string>> = {
     "why.tech.description": "Modern stack, clean code, solutions that scale with you.",
     "why.communication.title": "Direct Communication",
     "why.communication.description": "No intermediaries. Clear communication and measurable results.",
-    
+
     // About
     "about.badge": "ABOUT ME",
-    "about.title": "I build what you imagine.",
-    "about.p1": "I'm a developer and designer passionate about creating digital experiences that combine minimalist aesthetics with robust technology. Behind AIGILE is an obsession: making every project feel handcrafted and work like a machine.",
-    "about.p2": "I work directly with each client. No huge teams, no slow processes. Just precise solutions, delivered on time.",
-    "about.cta": "Learn more",
-    
+    "about.title": "Elegant technology Real results",
+    "about.p1": "I'm Esteban, a developer focused on creating modern, fast, and visually memorable digital experiences.",
+    "about.p2": "I'm not interested in filling the internet with generic websites. Every project at AIGILE is built with intention: clean design, solid technology, and an experience that truly connects with people.",
+    "about.cta": "Let's build something",
+
     // Projects
     "projects.badge": "PROJECTS",
     "projects.title": "Demos and recent projects.",
@@ -86,12 +86,12 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.p3.category": "DASHBOARD",
     "projects.p3.title": "Live Analytics",
     "projects.p3.description": "Real-time business analytics dashboard with custom KPIs and data visualization.",
-    
+
     // CTA
     "cta.title": "Ready to take off?",
     "cta.subtitle": "Let's talk about your project. Response in less than 24h.",
     "cta.button": "Write on WhatsApp",
-    
+
     // Footer
     "footer.copyright": "All rights reserved.",
   },
@@ -102,20 +102,20 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.about": "Sobre mí",
     "nav.projects": "Trabajos",
     "nav.cta": "Hablemos",
-    
+
     // Hero
-    "hero.badge": "MICRO-AGENCIA TECNOLÓGICA",
+    "hero.badge": "AGENCIA DE AUTOMATIZACIÓN Y DESARROLLO",
     "hero.title1": "Diseño que vende.",
     "hero.title2": "Tecnología que escala.",
-    "hero.subtitle": "Landings, automatizaciones y dashboards a medida. Hechos con precisión para marcas que no se conforman.",
+    "hero.subtitle": "Creamos landing pages, automatizaciones y dashboards para negocios que quieren vender más y operar mejor.",
     "hero.cta.primary": "Iniciar Proyecto",
     "hero.cta.secondary": "Ver Trabajos",
-    
+
     // Services
     "services.badge": "SERVICIOS",
     "services.title": "Todo lo que necesitas, nada que no.",
     "services.landing.title": "Landing Pages",
-    "services.landing.description": "Sitios de alto impacto que convierten visitas en clientes.",
+    "services.landing.description": "Landing pages rápidas, modernas y optimizadas para convertir visitas en clientes.",
     "services.landing.f1": "Diseño premium personalizado",
     "services.landing.f2": "Optimizado para SEO",
     "services.landing.f3": "Carga ultra rápida",
@@ -132,7 +132,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.dashboard.f2": "Conecta tus fuentes de datos",
     "services.dashboard.f3": "Diseño responsivo",
     "services.dashboard.f4": "Acceso multi-usuario",
-    
+
     // Why AIGILE
     "why.badge": "POR QUÉ AIGILE",
     "why.title": "Una agencia ágil. Mentalidad de producto.",
@@ -144,14 +144,14 @@ const translations: Record<Language, Record<string, string>> = {
     "why.tech.description": "Stack moderno, código limpio, soluciones que escalan contigo.",
     "why.communication.title": "Comunicación Directa",
     "why.communication.description": "Sin intermediarios. Comunicación clara y resultados medibles.",
-    
+
     // About
     "about.badge": "SOBRE MÍ",
-    "about.title": "Construyo lo que imaginas.",
-    "about.p1": "Soy desarrollador y diseñador apasionado por crear experiencias digitales que combinan estética minimalista con tecnología robusta. Detrás de AIGILE hay una obsesión: que cada proyecto se sienta artesanal y funcione como una máquina.",
-    "about.p2": "Trabajo directo con cada cliente. Sin equipos gigantes, sin procesos lentos. Solo soluciones precisas, entregadas a tiempo.",
-    "about.cta": "Conoce más",
-    
+    "about.title": "Tecnología elegante Resultados reales",
+    "about.p1": "Soy Esteban, desarrollador enfocado en crear experiencias digitales modernas, rápidas y visualmente memorables.",
+    "about.p2": "No me interesa llenar internet de páginas genéricas. Cada proyecto en AIGILE se construye con intención: diseño limpio, tecnología sólida y una experiencia que realmente conecte con las personas.",
+    "about.cta": "Construyamos algo",
+
     // Projects
     "projects.badge": "TRABAJOS",
     "projects.title": "Demos y proyectos recientes.",
@@ -165,12 +165,12 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.p3.category": "DASHBOARD",
     "projects.p3.title": "Analytics en Vivo",
     "projects.p3.description": "Dashboard de analytics de negocio en tiempo real con KPIs personalizados.",
-    
+
     // CTA
     "cta.title": "¿Listo para despegar?",
     "cta.subtitle": "Hablemos de tu proyecto. Respuesta en menos de 24h.",
     "cta.button": "Escribir por WhatsApp",
-    
+
     // Footer
     "footer.copyright": "Todos los derechos reservados.",
   },

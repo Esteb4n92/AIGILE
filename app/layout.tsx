@@ -16,7 +16,7 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: 'AIGILE-Agencia Tech',
+  title: 'AIGILE | Agencia Digital',
   description: 'Landings premium, automatizaciones y dashboards a medida. Hechos con precisión para marcas que no se conforman.',
   generator: 'v0.app',
   keywords: ['automatización IA', 'landing pages', 'desarrollo web', 'dashboards', 'n8n', 'Make', 'Zapier'],

@@ -42,10 +42,10 @@ function ProjectCard({ project, t, viewText }: ProjectCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        
+
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent opacity-60" />
-        
+
         {/* Hover overlay with link */}
         {project.link && (
           <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -120,7 +120,7 @@ export function Projects() {
       titleKey: "projects.p3.title",
       descKey: "projects.p3.description",
       image: "/images/projects/project-3.jpg",
-      link: "https://example.com/demo-3",
+      link: "https://github.com/Esteb4n92/Portafolio-de-analitica.git",
       technologies: ["Next.js", "Chart.js", "Supabase"],
     },
   ];
@@ -143,8 +143,8 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <FadeInStagger 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" 
+        <FadeInStagger
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           staggerDelay={0.1}
         >
           {projects.map((project, index) => (

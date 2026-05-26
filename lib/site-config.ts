@@ -30,7 +30,7 @@ export const CALENDLY_LINK = "https://calendly.com/estebanvillawolk/reunion-con-
 // SOCIAL LINKS - EDIT HERE
 // ============================================
 export const socialLinks = {
-  instagram: "https://www.instagram.com/esteb4n_sjj/", // Edit Instagram link
+  instagram: "https://www.instagram.com/esteb4n.v/", // Edit Instagram link
   linkedin: "https://www.linkedin.com/in/estebanvillalo", // Edit LinkedIn link
   github: "https://github.com/Esteb4n92", // Edit GitHub link
 };
@@ -200,7 +200,7 @@ export const projectsContent = {
       title: "Live Analytics",
       description: "Real-time business analytics dashboard with custom KPIs and data visualization.",
       image: "/images/projects/project-3.jpg",
-      link: "https://example.com/demo-3",
+      link: "https://github.com/Esteb4n92/Portafolio-de-analitica.git",
       technologies: ["Next.js", "Chart.js", "Supabase"],
     },
     // ============================================
