@@ -123,6 +123,14 @@ export function Projects() {
       link: "https://github.com/Esteb4n92/Portafolio-de-analitica.git",
       technologies: ["Next.js", "Chart.js", "Supabase"],
     },
+    {
+      categoryKey: "projects.p4.category",
+      titleKey: "projects.p4.title",
+      descKey: "projects.p4.description",
+      image: "/images/projects/project-4.jpg",
+      link: "https://redagenciabq.vercel.app/",
+      technologies: ["Next.js", "Tailwind", "Vercel"],
+    },
   ];
 
   return (
