@@ -86,10 +86,6 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.p3.category": "DASHBOARD",
     "projects.p3.title": "Live Analytics",
     "projects.p3.description": "Real-time business analytics dashboard with custom KPIs and data visualization.",
-    "projects.p4.category": "LANDING PAGE",
-    "projects.p4.title": "Red Agencia BQ",
-    "projects.p4.description": "Full landing page for a client agency. Modern design, fast loading, and optimized for conversions.",
-
     // CTA
     "cta.title": "Ready to take off?",
     "cta.subtitle": "Let's talk about your project. Response in less than 24h.",
@@ -168,10 +164,6 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.p3.category": "DASHBOARD",
     "projects.p3.title": "Analytics en Vivo",
     "projects.p3.description": "Dashboard de analytics de negocio en tiempo real con KPIs personalizados.",
-    "projects.p4.category": "LANDING PAGE",
-    "projects.p4.title": "Red Agencia BQ",
-    "projects.p4.description": "Landing page completa para una agencia cliente. Diseño moderno, carga rápida y optimizada para conversiones.",
-
     // CTA
     "cta.title": "¿Listo para despegar?",
     "cta.subtitle": "Hablemos de tu proyecto. Respuesta en menos de 24h.",

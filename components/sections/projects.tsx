@@ -104,7 +104,7 @@ export function Projects() {
       titleKey: "projects.p1.title",
       descKey: "projects.p1.description",
       image: "/images/projects/project-1.jpg",
-      link: "https://example.com/demo-1",
+      link: "https://redagenciabq.vercel.app/",
       technologies: ["React", "Tailwind", "Framer Motion"],
     },
     {
@@ -122,14 +122,6 @@ export function Projects() {
       image: "/images/projects/project-3.jpg",
       link: "https://github.com/Esteb4n92/Portafolio-de-analitica.git",
       technologies: ["Next.js", "Chart.js", "Supabase"],
-    },
-    {
-      categoryKey: "projects.p4.category",
-      titleKey: "projects.p4.title",
-      descKey: "projects.p4.description",
-      image: "/images/projects/project-4.jpg",
-      link: "https://redagenciabq.vercel.app/",
-      technologies: ["Next.js", "Tailwind", "Vercel"],
     },
   ];
 
