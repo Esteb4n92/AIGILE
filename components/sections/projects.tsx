@@ -91,13 +91,13 @@ function ProjectCard({ project, t, viewText }: ProjectCardProps) {
           ))}
         </div>
 
-        {/* Always-visible CTA (works on touch devices) */}
+        {/* Mobile-only CTA (desktop uses the hover overlay) */}
         {project.link && (
           <Link
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition-colors"
+            className="mt-5 md:hidden inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition-colors"
           >
             {viewText}
             <ExternalLink size={14} />
