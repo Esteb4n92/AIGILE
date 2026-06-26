@@ -90,6 +90,19 @@ function ProjectCard({ project, t, viewText }: ProjectCardProps) {
             </span>
           ))}
         </div>
+
+        {/* Always-visible CTA (works on touch devices) */}
+        {project.link && (
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition-colors"
+          >
+            {viewText}
+            <ExternalLink size={14} />
+          </Link>
+        )}
       </div>
     </motion.div>
   );
@@ -112,7 +125,7 @@ export function Projects() {
       titleKey: "projects.p2.title",
       descKey: "projects.p2.description",
       image: "/images/projects/project-2.jpg",
-      link: "https://example.com/demo-2",
+      link: "https://reportflowia.vercel.app/excel-flow",
       technologies: ["n8n", "OpenAI", "HubSpot"],
     },
     {
