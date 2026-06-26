@@ -51,57 +51,9 @@ Landing page de AIGILE, una micro-agencia tecnológica especializada en landing 
 
 ---
 
-## Requisitos previos
-
-- Node.js 18.18 o superior
-- pnpm (recomendado)
-
----
-
-## Instalación y uso
-
-Clonar el repositorio e instalar dependencias:
-
-```bash
-git clone https://github.com/Esteb4n92/AIGILE.git
-cd AIGILE
-pnpm install
-```
-
-Iniciar el servidor de desarrollo:
-
-```bash
-pnpm dev
-```
-
-La aplicación quedará disponible en `http://localhost:3000`.
-
-### Scripts disponibles
-
-| Script          | Descripción                                      |
-| --------------- | ------------------------------------------------ |
-| `pnpm dev`      | Inicia el servidor de desarrollo                 |
-| `pnpm build`    | Genera la versión de producción                  |
-| `pnpm start`    | Sirve la versión de producción                   |
-| `pnpm lint`     | Ejecuta el linter                                |
-
----
-
-## Personalización
-
-Casi todo el contenido del sitio (textos, servicios, proyectos, enlaces sociales, WhatsApp y Calendly) se edita desde `lib/site-config.ts`, sin necesidad de modificar los componentes. Las imágenes se ubican en la carpeta `public/`.
-
----
-
-## Despliegue
-
-El proyecto está optimizado para desplegarse en [Vercel](https://vercel.com). Al conectar el repositorio, Vercel detecta automáticamente Next.js y configura el build. Cada push a la rama `main` genera un nuevo despliegue.
-
----
-
 ## Autor
 
-**Esteban Villalobos** — AIGILE
+**Esteban Villalobos Meriño** — AIGILE
 
 - GitHub: [@Esteb4n92](https://github.com/Esteb4n92)
 - LinkedIn: [estebanvillalo](https://www.linkedin.com/in/estebanvillalo)
